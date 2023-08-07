@@ -1,5 +1,6 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
+const generateMarkdown = require('./utils/generateMarkdown.js');
 
 const init = () => {
     inquirer.prompt([
@@ -39,13 +40,12 @@ const askQuestions = () => {
         {
             type: 'input',
             name: 'usage',
-            message: 'How do we use this project?'
+            message: 'How do we use this project?',
         },
         {
-            type: 'list',
-            name: 'license',
-            message: 'Which license would you like?',
-            choices: ['MIT', ''],
+            type: 'confirmation',
+            name: 'licenseconfirm',
+            message: 'Would you like to add a license to your project?',
         },
         {
             type: 'input',
@@ -61,45 +61,56 @@ const askQuestions = () => {
             type: 'input',
             name: 'email',
             message: 'What is your email address?',
-        }
-
-    ])
+        },
+        
+    ])    
     .then((answers) => {
-        const readMeContent = generateReadme(answers);
+        const licenseBadge = generateMarkdown.renderLicenseBadge(answers.licenseconfirm);
+        const licenseHtml = generateMarkdown.renderLicenseSection(license);
+
+        const readMeContent = generateReadme(answers, licenseBadge, licenseHtml);
 
         fs.writeFile('README.md', readMeContent, (err) =>
             err ? console.log(err) : console.log('Successfully created README')
         );
     });
-}
+};
 
-const generateReadme = ({ title, description, install, usage, license, contribution, github, email}) =>
-`# ${title}
+const generateReadme = ({ title, description, install, usage, licenseconfirm, licenseHtml, licenseBadge, contribution, github, email}) => {
+return `${licenseBadge}
 
-## Description
+# ${title} 
 
-${description}
+ ## Description
 
-## Instalation
+    ${description}
 
-${install}
+ ## Table Of Contents
 
-## Usage
+ - [Installation](#installation)
+ - [Usage](#usage)
+ - [License](#license)
+ - [Contributing](#contibution)
+ - [Questions](#questions)
 
-${usage}
+ ## Installation
 
-## License
+    ${install}
 
-${license}
+ ## Usage
 
-## How To Contribute
+    ${usage}
 
-${contribution}
+${licensesection}
 
-## Questions
+ ## How To Contribute
 
-My GitHub: [GitHub](https://github.com/${github})
+    ${contribution}
 
-My Email: ${email}`; 
+ ## Questions
+
+    My GitHub: [GitHub](https://github.com/${github})
+ 
+    My Email: ${email}`};
 
 init();
