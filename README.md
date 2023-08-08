@@ -8,8 +8,10 @@ This code creates a README for your project with your personal input.
 
 Run this program with Node.js in your terminal.
 
-![ScreentShot](./Develop/Images/Screenshot.png)
+[Screen Recording](https://drive.google.com/file/d/1HcRekMSO6TGt-2eQ7HKoQbfG2guoR5Fn/view)
 
+![ScreentShot](./Develop/Images/Screenshot.png)
+![Screenshot2](./Develop/Images/Screenshot2.png)
 
 
 
