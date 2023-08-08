@@ -1,3 +1,19 @@
+# Read Me Creator
+
+## Description
+
+This code creates a README for your project with your personal input.
+
+## Usage 
+
+Run this program with Node.js in your terminal.
+
+![ScreentShot](./Develop/Images/Screenshot.png)
+
+
+
+
+
 # 09 Node.js Challenge: Professional README Generator
 
 ## Your Task
