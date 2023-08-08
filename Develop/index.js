@@ -43,11 +43,6 @@ const askQuestions = () => {
             message: 'How do we use this project?',
         },
         {
-            type: 'confirmation',
-            name: 'licenseconfirm',
-            message: 'Would you like to add a license to your project?',
-        },
-        {
             type: 'input',
             name: 'contribution',
             message: 'How can others contribute to this project?'
@@ -62,22 +57,42 @@ const askQuestions = () => {
             name: 'email',
             message: 'What is your email address?',
         },
+        {
+            type: 'confirm',
+            name: 'licenseconfirm',
+            message: 'Would you like to add a license to your project?',
+        },
         
     ])    
     .then((answers) => {
-        const licenseBadge = generateMarkdown.renderLicenseBadge(answers.licenseconfirm);
-        const licenseHtml = generateMarkdown.renderLicenseSection(license);
-
-        const readMeContent = generateReadme(answers, licenseBadge, licenseHtml);
-
-        fs.writeFile('README.md', readMeContent, (err) =>
-            err ? console.log(err) : console.log('Successfully created README')
-        );
+        if(answers.licenseconfirm === true) {
+            askLicenseQuestion(answers);
+        } else {
+            generateReadme(answers);
+        }
     });
 };
 
-const generateReadme = ({ title, description, install, usage, licenseconfirm, licenseHtml, licenseBadge, contribution, github, email}) => {
-return `${licenseBadge}
+const askLicenseQuestion = (previousAnswers) => {
+    inquirer.prompt([
+        {
+        type: 'list',
+        name: 'license',
+        message: 'Which license would you like?',
+        choices: ['MIT', 'IBM', 'ISC', 'Mozilla', 'Apache'],
+        },
+    ])
+    .then((licenseAnswers) => {
+        const allAnswers = {...previousAnswers, ...licenseAnswers};
+        generateReadme(allAnswers);
+    })
+};
+
+const generateReadme = ({ title, description, install, usage, license, contribution, github, email}) => {
+    const renderLicenseBadge = generateMarkdown.renderLicenseBadge(license);
+    const renderLicenseHtml = generateMarkdown.renderLicenseSection(license);
+
+const readMeContent = `${renderLicenseBadge}
 
 # ${title} 
 
@@ -101,7 +116,7 @@ return `${licenseBadge}
 
     ${usage}
 
-${licensesection}
+${renderLicenseHtml}
 
  ## How To Contribute
 
@@ -111,6 +126,11 @@ ${licensesection}
 
     My GitHub: [GitHub](https://github.com/${github})
  
-    My Email: ${email}`};
+    My Email: ${email}`
+
+    fs.writeFile('README.md', readMeContent, (err) =>
+            err ? console.log(err) : console.log('Successfully created README')
+    );
+};
 
 init();
