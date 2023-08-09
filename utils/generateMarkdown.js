@@ -12,8 +12,7 @@ function renderLicenseBadge(license) {
 }
 
 function renderLicenseSection(license) {
-  console.log(license);
-  if(license === true) {
+  if(license !== '') {
  return ` ## License
 
   ${license} License
