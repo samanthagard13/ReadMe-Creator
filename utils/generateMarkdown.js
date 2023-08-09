@@ -12,7 +12,7 @@ function renderLicenseBadge(license) {
 }
 
 function renderLicenseSection(license) {
-
+  if(license === true) {
  return ` ## License
 
   ${license} License
@@ -34,7 +34,10 @@ function renderLicenseSection(license) {
   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
   SOFTWARE.`
-
+  }
+  else {
+    return '';
+  }
 }
 
 module.exports = {
