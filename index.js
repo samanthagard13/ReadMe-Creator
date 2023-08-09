@@ -128,7 +128,7 @@ ${licenseSection}
  
     My Email: ${email}`
 
-    fs.writeFile('README.md', readMeContent, (err) =>
+    fs.writeFile('GENERATED_README.md', readMeContent, (err) =>
             err ? console.log(err) : console.log('Successfully created README')
     );
 };
