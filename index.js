@@ -87,13 +87,13 @@ const askLicenseQuestion = (previousAnswers) => {
     ])
     .then((licenseAnswers) => {
         const allAnswers = {...previousAnswers, ...licenseAnswers};
-        licenseSection = generateMarkdown.renderLicenseSection(allAnswers.license).replace('', '${licenseSection}');
-        badge = generateMarkdown.renderLicenseBadge(allAnswers.license).replace('', '${badge}');
-        generateReadme(allAnswers);
+        licenseSection = generateMarkdown.renderLicenseSection(allAnswers.license);
+        badge = generateMarkdown.renderLicenseBadge(allAnswers.license);
+        generateReadme(allAnswers, badge, licenseSection);
     })
 };
 
-const generateReadme = ({badge, title, description, install, usage, licenseSection, contribution, github, email}) => {
+const generateReadme = ({ badge, title, description, install, usage, licenseSection, contribution, github, email }) => {
 
     const readMeContent = 
     
