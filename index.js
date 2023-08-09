@@ -70,8 +70,7 @@ const askQuestions = () => {
         if(answers.licenseconfirm === true) {
             askLicenseQuestion(answers);
         } else {
-            licenseSection = generateMarkdown.renderLicenseSection(answers.license).replace('${license}', '');
-            badge = generateMarkdown.renderLicenseBadge(answers.license).replace('${badge}', '');
+   
             generateReadme(answers);
         }
     });
@@ -88,6 +87,8 @@ const askLicenseQuestion = (previousAnswers) => {
     ])
     .then((licenseAnswers) => {
         const allAnswers = {...previousAnswers, ...licenseAnswers};
+        licenseSection = generateMarkdown.renderLicenseSection(allAnswers.license).replace('', '${licenseSection}');
+        badge = generateMarkdown.renderLicenseBadge(allAnswers.license).replace('', '${badge}');
         generateReadme(allAnswers);
     })
 };
