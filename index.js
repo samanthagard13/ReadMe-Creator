@@ -1,6 +1,8 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown.js');
+let badge = '';
+let licenseSection = '';
 
 const init = () => {
     inquirer.prompt([
@@ -68,6 +70,8 @@ const askQuestions = () => {
         if(answers.licenseconfirm === true) {
             askLicenseQuestion(answers);
         } else {
+            licenseSection = generateMarkdown.renderLicenseSection(answers.license).replace('${license}', '');
+            badge = generateMarkdown.renderLicenseBadge(answers.license).replace('${badge}', '');
             generateReadme(answers);
         }
     });
@@ -88,11 +92,11 @@ const askLicenseQuestion = (previousAnswers) => {
     })
 };
 
-const generateReadme = ({ title, description, install, usage, license, contribution, github, email, renderLicenseBadge, renderLicenseSection}) => {
-    const badge = generateMarkdown.renderLicenseBadge(license);
-    const licenseSection = generateMarkdown.renderLicenseSection(license);
+const generateReadme = ({badge, title, description, install, usage, licenseSection, contribution, github, email}) => {
 
-const readMeContent = `${badge}
+    const readMeContent = 
+    
+`${badge}
 
 # ${title} 
 

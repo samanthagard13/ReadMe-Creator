@@ -13,7 +13,7 @@ function renderLicenseBadge(license) {
 
 function renderLicenseSection(license) {
 
-  `## License
+ return ` ## License
 
   ${license} License
 
