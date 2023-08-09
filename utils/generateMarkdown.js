@@ -13,7 +13,7 @@ function renderLicenseBadge(license) {
 
 function renderLicenseSection(license) {
 
-  const licenseContent = `## License
+  `## License
 
   ${license} License
 
@@ -39,6 +39,5 @@ function renderLicenseSection(license) {
 
 module.exports = {
   renderLicenseBadge,
-  renderLicenseLink,
   renderLicenseSection
 };

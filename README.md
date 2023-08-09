@@ -10,8 +10,8 @@ Run this program with Node.js in your terminal.
 
 [Screen Recording](https://drive.google.com/file/d/1HcRekMSO6TGt-2eQ7HKoQbfG2guoR5Fn/view)
 
-![ScreentShot](./Develop/Images/Screenshot.png)
-![Screenshot2](./Develop/Images/Screenshot2.png)
+![ScreentShot](./Images/Screenshot.png)
+![Screenshot2](./Images/Screenshot2.png)
 
 
 

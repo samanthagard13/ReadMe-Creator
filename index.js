@@ -90,7 +90,7 @@ const askLicenseQuestion = (previousAnswers) => {
 
 const generateReadme = ({ title, description, install, usage, license, contribution, github, email}) => {
     const renderLicenseBadge = generateMarkdown.renderLicenseBadge(license);
-    const renderLicenseHtml = generateMarkdown.renderLicenseSection(license);
+    const renderLicenseSection = generateMarkdown.renderLicenseSection(license);
 
 const readMeContent = `${renderLicenseBadge}
 
@@ -105,7 +105,7 @@ const readMeContent = `${renderLicenseBadge}
  - [Installation](#installation)
  - [Usage](#usage)
  - [License](#license)
- - [Contributing](#contibution)
+ - [Contributing](#contribution)
  - [Questions](#questions)
 
  ## Installation
@@ -116,7 +116,7 @@ const readMeContent = `${renderLicenseBadge}
 
     ${usage}
 
-${renderLicenseHtml}
+${renderLicenseSection}
 
  ## How To Contribute
 
