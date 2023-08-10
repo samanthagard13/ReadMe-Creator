@@ -1,4 +1,4 @@
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 # read me creator 
 
@@ -50,6 +50,6 @@
 
  ## Questions
 
-    My GitHub: [GitHub](https://github.com/saamantha)
+    My GitHub: [GitHub](#https://github.com/samantha)
  
-    My Email: [email](samantha@gmail.com)
+    My Email: [email](#samantha@gmail.com)
