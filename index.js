@@ -99,7 +99,7 @@ const generateReadme = ({ license, title, description, install, usage, contribut
 
  ## Description
 
-${description}
+ ${description}
 
  ## Table Of Contents
 
@@ -111,23 +111,23 @@ ${description}
 
  ## Installation
 
-${install}
+ ${install}
 
  ## Usage
 
-${usage}
+ ${usage}
 
-${generateMarkdown.renderLicenseSection(license)}
+ ${generateMarkdown.renderLicenseSection(license)}
 
  ## How To Contribute
 
-${contribution}
+ ${contribution}
 
  ## Questions
 
-My GitHub: [GitHub](https://github.com/${github})
+ My GitHub: [GitHub](https://github.com/${github})
  
-My Email: [email](${email})`
+ My Email: [email](${email})`
 
     fs.writeFile('GENERATED_README.md', readMeContent, (err) =>
             err ? console.log(err) : console.log('Successfully created README')
