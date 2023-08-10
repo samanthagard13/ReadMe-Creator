@@ -4,7 +4,7 @@
 
  ## Description
 
-    create read me
+ create read me
 
  ## Table Of Contents
 
@@ -16,17 +16,17 @@
 
  ## Installation
 
-    clone this repo
+ clne this repo
 
  ## Usage
 
-    run in your terminal
+ run in your terminal
 
- ## License
+  ## License
 
   MIT License
 
-      Permission is hereby granted, free of charge, to any person obtaining a 
+  Permission is hereby granted, free of charge, to any person obtaining a 
   copy of this software and associated documentation files (the "Software"), to 
   deal in the Software without restriction, including without limitation the 
   rights to use, copy, modify, merge, publish, distribute, sublicense, and/or 
@@ -46,10 +46,10 @@
 
  ## How To Contribute
 
-    make changes
+ make changes
 
  ## Questions
 
-    My GitHub: [GitHub](#https://github.com/samantha)
+ My GitHub: [GitHub](https://github.com/samantha)
  
-    My Email: [email](#samantha@gmail.com)
+ My Email: [email](samantha@gmail.com)
