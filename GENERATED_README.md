@@ -11,7 +11,7 @@
  - [Installation](#installation)
  - [Usage](#usage)
  - [License](#license)
- - [Contributing](#contribution)
+ - [Contributing](#contributing)
  - [Questions](#questions)
 
  ## Installation
@@ -50,6 +50,6 @@
 
  ## Questions
 
-    My GitHub: [GitHub](https://github.com/samantha)
+    My GitHub: ![GitHub](https://github.com/samantha)
  
-    My Email: samantha
+    My Email: ![email](samantha@gmail.com)
