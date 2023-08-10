@@ -106,7 +106,7 @@ const generateReadme = ({ license, title, description, install, usage, contribut
  - [Installation](#installation)
  - [Usage](#usage)
  - [License](#license)
- - [Contributing](#contribution)
+ - [Contributing](#contributing)
  - [Questions](#questions)
 
  ## Installation
@@ -125,9 +125,9 @@ ${generateMarkdown.renderLicenseSection(license)}
 
  ## Questions
 
-    My GitHub: [GitHub](https://github.com/${github})
+    My GitHub: ![GitHub](https://github.com/${github})
  
-    My Email: ${email}`
+    My Email: ![email](${email})`
 
     fs.writeFile('GENERATED_README.md', readMeContent, (err) =>
             err ? console.log(err) : console.log('Successfully created README')
