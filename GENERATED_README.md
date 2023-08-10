@@ -50,6 +50,6 @@
 
  ## Questions
 
-    My GitHub: ![GitHub](https://github.com/samantha)
+    My GitHub: [GitHub](https://github.com/samantha)
  
-    My Email: ![email](samantha@gmail.com)
+    My Email: [email](samantha@gmail.com)
