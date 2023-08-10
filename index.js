@@ -125,9 +125,9 @@ ${generateMarkdown.renderLicenseSection(license)}
 
  ## Questions
 
-    My GitHub: [GitHub](https://github.com/${github})
+    My GitHub: [GitHub](#https://github.com/${github})
  
-    My Email: [email](${email})`
+    My Email: [email](#${email})`
 
     fs.writeFile('GENERATED_README.md', readMeContent, (err) =>
             err ? console.log(err) : console.log('Successfully created README')

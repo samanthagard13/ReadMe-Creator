@@ -1,11 +1,11 @@
 
 function renderLicenseBadge(license) {
   const badges = {
-    MIT: `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]`,
-    IBM: `[![License: IPL 1.0](https://img.shields.io/badge/License-IPL_1.0-blue.svg)]`,
-    ISC: `[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)]`,
-    Mozilla: `[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)]`,
-    Apache: `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)]`
+    MIT: `![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)`,
+    IBM: `![License: IPL 1.0](https://img.shields.io/badge/License-IPL_1.0-blue.svg)`,
+    ISC: `![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)`,
+    Mozilla: `![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)`,
+    Apache: `![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)`
   };
 
   return badges[license] || ''; 
