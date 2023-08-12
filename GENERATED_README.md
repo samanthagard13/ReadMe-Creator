@@ -1,4 +1,4 @@
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+![License: IPL 1.0](https://img.shields.io/badge/License-IPL_1.0-blue.svg)
 
 # read me creator 
 
@@ -16,15 +16,15 @@
 
  ## Installation
 
- clne this repo
+ clone this repo
 
  ## Usage
 
- run in your terminal
+ run in terminal
 
   ## License
 
-  MIT License
+  IBM License
 
   Permission is hereby granted, free of charge, to any person obtaining a 
   copy of this software and associated documentation files (the "Software"), to 
@@ -48,8 +48,12 @@
 
  make changes
 
+ # Tests
+
+ run tests
+
  ## Questions
 
  My GitHub: [GitHub](https://github.com/samantha)
  
- My Email: [email](samantha@gmail.com)
+ My Email: [Email](samantha@gmail.com)

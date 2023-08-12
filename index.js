@@ -45,12 +45,17 @@ const askQuestions = () => {
         {
             type: 'input',
             name: 'contribution',
-            message: 'How can others contribute to this project?'
+            message: 'How can others contribute to this project?',
+        },
+        {
+            type:'input',
+            name: 'tests',
+            message: 'How can others test your program?',
         },
         {
             type: 'input',
             name: 'github',
-            message: 'What is your GitHub username?'
+            message: 'What is your GitHub username?',
         },
         {
             type: 'input',
@@ -89,7 +94,7 @@ const askLicenseQuestion = (previousAnswers) => {
     })
 };
 
-const generateReadme = ({ license, title, description, install, usage, contribution, github, email }) => {
+const generateReadme = ({ license, title, description, install, usage, contribution, tests, github, email }) => {
 
     const readMeContent = 
     
@@ -123,11 +128,15 @@ const generateReadme = ({ license, title, description, install, usage, contribut
 
  ${contribution}
 
+ # Tests
+
+ ${tests}
+
  ## Questions
 
  My GitHub: [GitHub](https://github.com/${github})
  
- My Email: [email](${email})`
+ My Email: [Email](${email})`
 
     fs.writeFile('GENERATED_README.md', readMeContent, (err) =>
             err ? console.log(err) : console.log('Successfully created README')
